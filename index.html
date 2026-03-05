@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Andrew Films</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,189 +14,202 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-scroll-behavior:smooth;
 }
 
 body{
 background:#0b0b0b;
 color:white;
+font-family:Arial;
 }
 
-/* NAVBAR */
+/* NAVIGATION */
 
 nav{
-position:fixed;
-top:0;
-width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 10%;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(8px);
-z-index:999;
+padding:20px 60px;
+border-bottom:1px solid #333;
 }
 
-nav h2{
-color:#c59d3f;
-letter-spacing:2px;
+.logo{
+font-family:'Bebas Neue';
+font-size:50px;
+letter-spacing:4px;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
 }
 
 nav a{
-margin-left:25px;
-text-decoration:none;
 color:white;
-transition:.3s;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
 }
 
 nav a:hover{
-color:#c59d3f;
+color:#ff2e2e;
 }
 
-/* HERO VIDEO */
+/* HERO */
 
-header{
-height:100vh;
-position:relative;
+.hero{
+height:500px;
+background:url("hero.jpg") center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-overflow:hidden;
+position:relative;
 }
 
-header video{
+.hero::after{
+content:"";
 position:absolute;
 width:100%;
 height:100%;
-object-fit:cover;
-z-index:-2;
+background:rgba(0,0,0,0.6);
 }
 
-.overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.7);
-z-index:-1;
+.hero-content{
+position:relative;
+z-index:2;
 }
 
-.hero-text h1{
-font-size:70px;
-letter-spacing:4px;
-color:white;
-text-shadow:0 0 20px black;
+.hero h1{
+font-family:'Cinzel';
+font-size:65px;
+letter-spacing:5px;
 }
 
-.hero-text p{
-font-size:22px;
-margin-top:10px;
-color:#ddd;
-}
-
-.hero-btn{
-margin-top:30px;
+.watch-btn{
+margin-top:20px;
+background:#c51212;
 padding:15px 40px;
-background:#c59d3f;
 border:none;
 font-size:18px;
-cursor:pointer;
 color:white;
-transition:.3s;
+cursor:pointer;
 }
 
-.hero-btn:hover{
-background:#e3bb55;
-transform:scale(1.05);
+.watch-btn:hover{
+background:#ff1a1a;
 }
 
-/* SECTIONS */
+/* MOVIE TITLE */
 
-section{
-padding:100px 10%;
-}
-
-.title{
+.movie-title{
 text-align:center;
-font-size:38px;
-margin-bottom:50px;
-color:#c59d3f;
+padding:60px 20px;
 }
 
-/* SERVICES */
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px;
+.movie-title h2{
+font-family:'Cinzel';
+font-size:45px;
+letter-spacing:4px;
 }
 
-.service{
-background:#111;
-padding:35px;
-border-radius:10px;
-transition:.4s;
+.movie-title p{
+color:#aaa;
+letter-spacing:3px;
 }
 
-.service:hover{
-transform:translateY(-10px);
-box-shadow:0 10px 25px rgba(0,0,0,0.7);
-border:1px solid #c59d3f;
-}
+/* FILM SECTION */
 
-/* PORTFOLIO */
-
-.portfolio{
+.section{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+gap:30px;
+padding:40px 60px;
 }
 
-.project{
-height:220px;
-border-radius:8px;
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:flex-end;
+.card{
+background:#141414;
+border:1px solid #333;
+transition:0.4s;
+}
+
+.card:hover{
+transform:scale(1.05);
+border-color:#ff2e2e;
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card h3{
 padding:15px;
-font-weight:bold;
-transition:.4s;
+font-family:'Bebas Neue';
+font-size:26px;
+letter-spacing:2px;
 }
 
-.project:hover{
-transform:scale(1.06);
-}
+/* BOOKING */
 
-.wedding{
-background-image:url("https://images.unsplash.com/photo-1519741497674-611481863552");
-}
-
-.music{
-background-image:url("https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4");
-}
-
-.event{
-background-image:url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30");
-}
-
-.doc{
-background-image:url("https://images.unsplash.com/photo-1505685296765-3a2736de412f");
-}
-
-/* CONTACT */
-
-.contact{
+.booking{
+padding:60px;
+background:#0e0e0e;
 text-align:center;
 }
 
-.contact p{
-margin:10px 0;
+.booking h2{
+font-family:'Cinzel';
+font-size:40px;
+letter-spacing:3px;
+}
+
+.booking-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+margin-top:40px;
+}
+
+.booking-info{
+text-align:left;
+line-height:1.8;
 font-size:18px;
 }
 
-/* WHATSAPP FLOAT BUTTON */
+.booking-form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.booking-form input,
+.booking-form textarea{
+padding:12px;
+background:#141414;
+border:1px solid #333;
+color:white;
+}
+
+.booking-form textarea{
+height:120px;
+}
+
+.booking-form button{
+background:#c51212;
+padding:14px;
+border:none;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+.booking-form button:hover{
+background:#ff1a1a;
+}
+
+/* WHATSAPP BUTTON */
 
 .whatsapp{
 position:fixed;
@@ -205,141 +218,153 @@ right:20px;
 background:#25D366;
 color:white;
 padding:15px 18px;
-border-radius:50px;
-font-size:18px;
+border-radius:50%;
 text-decoration:none;
-box-shadow:0 5px 20px rgba(0,0,0,0.5);
+font-size:18px;
 }
 
 /* FOOTER */
 
 footer{
-background:black;
 text-align:center;
-padding:25px;
-color:#888;
-font-size:14px;
+padding:30px;
+border-top:1px solid #333;
+margin-top:40px;
+color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.booking-container{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
-
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+
 <nav>
 
-<h2>Andrew Films</h2>
+<div class="logo">ANDREW FILMS</div>
 
-<div>
-<a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#contact">Contact</a>
-</div>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Films</a></li>
+<li><a href="#">Book</a></li>
+</ul>
 
 </nav>
 
-<header>
+<!-- HERO -->
 
-<video autoplay muted loop>
-<source src="your-trailer.mp4" type="video/mp4">
-</video>
+<section class="hero">
 
-<div class="overlay"></div>
+<div class="hero-content">
 
-<div class="hero-text">
+<h1>STORIES FROM THE STREETS</h1>
 
-<h1>Andrew Films</h1>
-<p>Cinematic Storytelling for Every Moment</p>
-
-<button class="hero-btn" onclick="document.getElementById('contact').scrollIntoView()">
-Book Now
-</button>
-
-</div>
-
-</header>
-
-<section id="services">
-
-<h2 class="title">Services</h2>
-
-<div class="services">
-
-<div class="service">
-<h3>Wedding Films</h3>
-<p>Cinematic wedding storytelling capturing unforgettable moments.</p>
-</div>
-
-<div class="service">
-<h3>Music Videos</h3>
-<p>Creative visuals that elevate artists and music brands.</p>
-</div>
-
-<div class="service">
-<h3>Funeral Coverage</h3>
-<p>Respectful and professional memorial filming.</p>
-</div>
-
-<div class="service">
-<h3>Documentaries</h3>
-<p>Powerful storytelling through cinematic documentaries.</p>
-</div>
-
-<div class="service">
-<h3>Events</h3>
-<p>Professional coverage for celebrations and gatherings.</p>
-</div>
-
-<div class="service">
-<h3>Editing</h3>
-<p>Professional cinematic editing and post-production.</p>
-</div>
+<a href="https://youtube.com/shorts/QKeFRk4Cyqg?si=4spOtkkZ8D3wq9L9" target="_blank">
+<button class="watch-btn">WATCH TRAILER</button>
+</a>
 
 </div>
 
 </section>
 
-<section id="portfolio">
+<!-- MOVIE TITLE -->
 
-<h2 class="title">Portfolio</h2>
+<section class="movie-title">
 
-<div class="portfolio">
+<h2>THEMBALETHU IKASI LAM</h2>
+<p>SURVIVE AGAINST ALL ODDS</p>
 
-<div class="project wedding">Wedding Films</div>
+</section>
 
-<div class="project music">Music Videos</div>
+<!-- FILM SECTION -->
 
-<div class="project event">Events</div>
+<section class="section">
 
-<div class="project doc">Documentaries</div>
+<div class="card">
+<img src="film1.jpg">
+<h3>CITY OF CHAOS</h3>
+</div>
 
+<div class="card">
+<img src="film2.jpg">
+<h3>DARK PURSUIT</h3>
+</div>
+
+<div class="card">
+<img src="film3.jpg">
+<h3>ON SET ACTION</h3>
 </div>
 
 </section>
 
-<section id="contact" class="contact">
+<!-- BOOKING -->
 
-<h2 class="title">Contact</h2>
+<section class="booking">
 
-<p><strong>WhatsApp:</strong> 083 541 5467</p>
-<p><strong>Phone:</strong> 065 597 5148</p>
+<h2>BOOK ANDREW FILMS</h2>
+<p>For film production, music videos, photography and events.</p>
+
+<div class="booking-container">
+
+<div class="booking-info">
+
+<p><strong>Director:</strong> Andrew Bryton</p>
+<p><strong>Production:</strong> Andrew Films</p>
+<p><strong>Location:</strong> Cape Town, South Africa</p>
 
 <p><strong>Email:</strong> andrewfilmsza@gmail.com</p>
-<p><strong>Bookings:</strong> andrewbrytonbookings@gmail.com</p>
+<p><strong>Call:</strong> 0655975148</p>
+<p><strong>WhatsApp:</strong> 0835415467</p>
 
-<p>For bookings and collaborations feel free to reach out.</p>
+</div>
+
+<form class="booking-form">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<input type="text" placeholder="Project Type">
+
+<textarea placeholder="Tell us about your project"></textarea>
+
+<button type="submit">Send Booking Request</button>
+
+</form>
+
+</div>
 
 </section>
 
-<a class="whatsapp" href="https://wa.me/27835415467">
-Chat on WhatsApp
-</a>
+<!-- WHATSAPP BUTTON -->
+
+<a class="whatsapp" href="https://wa.me/27835415467">Chat</a>
+
+<!-- FOOTER -->
 
 <footer>
 
-© 2026 Andrew Films — Cinematic Storytelling
+© 2026 Andrew Films | Cinematic Storytelling
 
 </footer>
 
