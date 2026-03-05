@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrew Films</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0a0a0a;
+color:white;
+line-height:1.6;
+}
+
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+url("https://images.unsplash.com/photo-1492724441997-5dc865305da7");
+background-size:cover;
+background-position:center;
+}
+
+header h1{
+font-size:60px;
+letter-spacing:3px;
+}
+
+header p{
+margin-top:15px;
+font-size:22px;
+color:#d4d4d4;
+}
+
+button{
+margin-top:30px;
+padding:15px 35px;
+font-size:18px;
+border:none;
+background:#c59d3f;
+color:white;
+cursor:pointer;
+border-radius:4px;
+}
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+font-size:36px;
+margin-bottom:40px;
+text-align:center;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.service-box{
+background:#111;
+padding:30px;
+border-radius:8px;
+}
+
+.portfolio{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.portfolio div{
+height:180px;
+background:#222;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:6px;
+}
+
+.contact{
+text-align:center;
+}
+
+footer{
+background:#000;
+padding:25px;
+text-align:center;
+font-size:14px;
+color:#aaa;
+}
+
+a{
+color:#c59d3f;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Andrew Films</h1>
+<p>Cinematic Storytelling for Every Moment</p>
+
+<button onclick="document.getElementById('contact').scrollIntoView()">
+Book Now
+</button>
+
+</header>
+
+<section>
+
+<h2 class="section-title">About</h2>
+
+<p style="text-align:center; max-width:800px; margin:auto;">
+Andrew Films is a passionate cinematography brand dedicated to capturing real
+moments through powerful visual storytelling. From weddings and memorial
+services to music videos, documentaries and events, Andrew Films focuses on
+creating cinematic memories that last forever.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Services</h2>
+
+<div class="services">
+
+<div class="service-box">
+<h3>Wedding Cinematography</h3>
+<p>Beautiful cinematic wedding films capturing every special moment.</p>
+</div>
+
+<div class="service-box">
+<h3>Funeral & Memorial Coverage</h3>
+<p>Respectful and professional coverage for memorial services.</p>
+</div>
+
+<div class="service-box">
+<h3>Music Videos</h3>
+<p>Creative visuals for artists and musicians.</p>
+</div>
+
+<div class="service-box">
+<h3>Documentaries</h3>
+<p>Story-driven documentary filmmaking.</p>
+</div>
+
+<div class="service-box">
+<h3>Event Videography</h3>
+<p>Coverage for corporate and personal events.</p>
+</div>
+
+<div class="service-box">
+<h3>Video Editing</h3>
+<p>Professional editing and cinematic post-production.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Portfolio</h2>
+
+<div class="portfolio">
+
+<div>Wedding Films</div>
+<div>Music Videos</div>
+<div>Documentaries</div>
+<div>Events</div>
+
+</div>
+
+<p style="text-align:center; margin-top:30px;">
+Add your YouTube or video links here to showcase your work.
+</p>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">Contact Andrew Films</h2>
+
+<p><strong>WhatsApp:</strong> 083 541 5467</p>
+<p><strong>Phone:</strong> 065 597 5148</p>
+
+<br>
+
+<p><strong>Email:</strong> andrewfilmsza@gmail.com</p>
+<p><strong>Bookings Email:</strong> andrewbrytonbookings@gmail.com</p>
+
+<br>
+
+<p>For bookings, collaborations or project inquiries feel free to reach out.</p>
+
+</section>
+
+<footer>
+
+© 2026 Andrew Films — All Rights Reserved
+
+</footer>
+
+</body>
+</html>
